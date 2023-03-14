@@ -1,0 +1,20 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: blockchain-demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/blockchain?useSSL=false&serverTimezone=UTC
+    username: root
+    password:
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+  main:
+    allow-circular-references: true
+mybatis-plus:
+  type-aliases-package: com.example.blockchaindemo.empty # 别名扫描包
+block:
+  address: ws://192.168.0.104:7001
+  difficulty: 4
+  p2pport: 7002
